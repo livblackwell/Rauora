@@ -3,42 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
-    <!-- Link to CSS -->
+    <title>Language Selection</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Your Brand Name</h1>
-    </header>
-
-    <section>
-        <h2>Information Tabs</h2>
-
-        <!-- Dropdown Information Tabs -->
-        <div class="dropdown">
-            <button onclick="toggleDropdown('dropdown1')">Tab 1</button>
-            <div id="dropdown1" class="dropdown-content">
-                <p>This is the content for Tab 1.</p>
-            </div>
+    <!-- Landing Page: Logo and Language Buttons -->
+    <div class="landing-page">
+        <img src="images/your-logo.png" alt="Logo" class="logo">
+        <div class="language-buttons">
+            <button class="lang-button" onclick="window.location.href='english.html'">English</button>
+            <button class="lang-button" onclick="window.location.href='maori.html'">Māori</button>
+            <button class="lang-button" onclick="window.location.href='mandarin.html'">Mandarin</button>
+            <button class="lang-button" onclick="window.location.href='german.html'">German</button>
         </div>
-
-        <div class="dropdown">
-            <button onclick="toggleDropdown('dropdown2')">Tab 2</button>
-            <div id="dropdown2" class="dropdown-content">
-                <p>This is the content for Tab 2.</p>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <button onclick="toggleDropdown('dropdown3')">Tab 3</button>
-            <div id="dropdown3" class="dropdown-content">
-                <p>This is the content for Tab 3.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Link to JavaScript -->
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
