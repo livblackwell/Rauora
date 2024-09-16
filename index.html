@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Brand Name</h1>
+    </header>
+
+    <section>
+        <h2>Information Tabs</h2>
+
+        <!-- Dropdown Information Tabs -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown('dropdown1')">Tab 1</button>
+            <div id="dropdown1" class="dropdown-content">
+                <p>This is the content for Tab 1.</p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="toggleDropdown('dropdown2')">Tab 2</button>
+            <div id="dropdown2" class="dropdown-content">
+                <p>This is the content for Tab 2.</p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="toggleDropdown('dropdown3')">Tab 3</button>
+            <div id="dropdown3" class="dropdown-content">
+                <p>This is the content for Tab 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
