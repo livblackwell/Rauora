@@ -76,3 +76,30 @@ body {
 .dropdown.active .dropdown-content {
     display: block;
 }
+
+/* Specific CSS for buttons in english.html */
+.language-page-buttons {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.language-page-buttons .button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ea7234;
+  background-color: transparent;
+  color: #ea7234;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.language-page-buttons .button:hover {
+  background-color: #f1efe5; /* or the corresponding hover effect */
+  color: #1a1714;
+}
