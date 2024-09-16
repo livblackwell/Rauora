@@ -103,3 +103,49 @@ body {
   background-color: #f1efe5; /* or the corresponding hover effect */
   color: #1a1714;
 }
+
+/* Ensure the page content takes the full height */
+.full-screen-dropdowns {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+/* Each dropdown takes 1/3 of the screen height and full width */
+.full-screen-dropdowns .dropdown {
+    height: 33.33vh; /* 1/3 of the viewport height */
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ea7234; /* Example border for visibility */
+}
+
+.dropdown-header {
+    background-color: #ea7234;
+    color: #f1efe5;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1efe5;
+    color: #1a1714;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.dropdown.open .dropdown-content {
+    display: block;
+}
+
