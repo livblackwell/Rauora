@@ -159,7 +159,7 @@ body {
 
 /* Add specific background images to each dropdown header */
 .dropdown:nth-child(1) .dropdown-header {
-    background-image: url('images/image1.jpg');
+    background-image: url('image1-comm.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@ body {
 }
 
 .dropdown:nth-child(2) .dropdown-header {
-    background-image: url('images/image2.jpg');
+    background-image: url('image3-enviro.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -175,7 +175,7 @@ body {
 }
 
 .dropdown:nth-child(3) .dropdown-header {
-    background-image: url('images/image3.jpg');
+    background-image: url('image3-self.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
