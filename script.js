@@ -1,6 +1,6 @@
-// Dropdown functionality
-document.querySelectorAll('.dropdown').forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('active');
+document.querySelectorAll('.dropdown-header').forEach(header => {
+    header.addEventListener('click', function() {
+        const dropdown = this.parentElement;
+        dropdown.classList.toggle('open');
     });
 });
