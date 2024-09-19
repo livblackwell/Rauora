@@ -1,5 +1,5 @@
-document.querySelectorAll('.dropdown-header').forEach(header => {
-    header.addEventListener('click', function() {
+document.querySelectorAll('.dropdown-header').forEach(button => {
+    button.addEventListener('click', function() {
         const dropdown = this.parentElement;
         const allDropdowns = document.querySelectorAll('.dropdown');
         
