@@ -40,11 +40,10 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
 }
 
 .dropdown {
-    flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -58,7 +57,7 @@ body {
     background-color: transparent;
     border: none;
     width: 100%;
-    height: 80px; /* Fixed height for each tab */
+    height: 33.33vh; /* Each tab takes up one-third of the screen height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,39 +71,26 @@ body {
     background-color: #ea7234;
 }
 
-/* Tab 1 Hover */
-.dropdown:nth-child(1) .dropdown-header:hover {
-    background-color: #ff6347; /* Example color for Tab 1 */
+/* Remove unwanted padding/margins from images */
+.dropdown-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: block;
 }
 
-/* Tab 2 Hover */
-.dropdown:nth-child(2) .dropdown-header:hover {
-    background-color: #4682b4; /* Example color for Tab 2 */
-}
-
-/* Tab 3 Hover */
-.dropdown:nth-child(3) .dropdown-header:hover {
-    background-color: #32cd32; /* Example color for Tab 3 */
-}
-
-
-/* Dropdown content: make it scrollable */
+/* Dropdown content: make it scrollable and fit within a set height */
 .dropdown-content {
     display: none;
-    max-height: 300px; /* Limit the height for scrollability */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 300px; /* Set a height limit for scrollability */
+    overflow-y: auto;
     background-color: #f1efe5;
     color: #1a1714;
     padding: 20px;
     text-align: left;
     box-sizing: border-box;
-}
-
-/* Image inside the dropdown content */
-.dropdown-image {
-    width: 100%; /* Image spans the full width of the dropdown */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px;
 }
 
 /* Open dropdown content */
@@ -116,7 +102,7 @@ body {
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
     .dropdown-header {
-        height: 60px; /* Smaller header for mobile */
+        height: 33.33vh; /* Maintain height for mobile */
     }
 
     .dropdown-image {
