@@ -15,13 +15,6 @@ body {
     margin: 20px;
 }
 
-
-/* Logo Styling */
-.landing-logo {
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Keep the aspect ratio */
-    margin-bottom: 20px; /* Space between logo and buttons */
-
 /* Button Styling */
 .lang-button {
     background: transparent;
