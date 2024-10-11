@@ -72,18 +72,21 @@ body {
     background-color: #ea7234;
 }
 
-/* Add different hover effects for each tab */
+/* Tab 1 Hover */
 .dropdown:nth-child(1) .dropdown-header:hover {
-    background-color: #ff6347;
+    background-color: #ff6347; /* Example color for Tab 1 */
 }
 
+/* Tab 2 Hover */
 .dropdown:nth-child(2) .dropdown-header:hover {
-    background-color: #4682b4;
+    background-color: #4682b4; /* Example color for Tab 2 */
 }
 
+/* Tab 3 Hover */
 .dropdown:nth-child(3) .dropdown-header:hover {
-    background-color: #32cd32;
+    background-color: #32cd32; /* Example color for Tab 3 */
 }
+
 
 /* Dropdown content: make it scrollable */
 .dropdown-content {
