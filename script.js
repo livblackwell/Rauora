@@ -1,15 +1,11 @@
-document.querySelectorAll('.dropdown-header').forEach(button => {
-    button.addEventListener('click', function() {
-        const dropdown = this.parentElement;
+document.querySelectorAll('.dropdown-header').forEach(header => {
+    header.addEventListener('click', function() {
+        const openDropdown = document.querySelector('.dropdown.open');
         
-        // Toggle only the clicked dropdown
-        dropdown.classList.toggle('open');
-
-        // Close other dropdowns
-        document.querySelectorAll('.dropdown').forEach(item => {
-            if (item !== dropdown) {
-                item.classList.remove('open');
-            }
-        });
+        if (openDropdown && openDropdown !== this.parentElement) {
+            openDropdown.classList.remove('open');
+        }
+        
+        this.parentElement.classList.toggle('open');
     });
 });
