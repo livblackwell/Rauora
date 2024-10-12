@@ -55,7 +55,8 @@ body {
     font-family: 'Helvetica', sans-serif;
     background-color: #1a1714;
     color: #ea7234;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100vh;
+    overflow: hidden; /* Prevent body scroll */
 }
 
 /* Dropdown Page Styles */
@@ -63,8 +64,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full height of the viewport */
-    overflow: hidden; /* Prevent overflow on the main page */
+    height: 100vh; /* Full height of the viewport */
 }
 
 .dropdown {
@@ -74,14 +74,13 @@ body {
     align-items: center;
     border: 1px solid #1a1714;
     box-sizing: border-box;
-    overflow: hidden; /* Prevent overflow in collapsed state */
 }
 
 .dropdown-header {
     background-color: transparent;
     border: none;
     width: 100%; /* Full width of the screen */
-    height: 33.33vh; /* Equal height for each tab when collapsed */
+    height: 33.33vh; /* Fixed height for each tab */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +88,6 @@ body {
     transition: background-color 0.3s ease;
     outline: none;
     padding: 0;
-    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .dropdown-header:hover {
@@ -103,17 +101,14 @@ body {
     padding: 20px;
     text-align: left;
     box-sizing: border-box;
+    max-height: 100vh; /* Ensure dropdown content fits within the viewport */
     overflow-y: auto; /* Allow scrolling for long content */
 }
 
 /* Open dropdown content */
 .dropdown.open .dropdown-content {
     display: block;
-    max-height: none; /* Remove the height limit when expanded */
-}
-
-.dropdown.open {
-    height: auto; /* Allow the dropdown to expand when opened */
+    height: calc(100vh - 33.33vh); /* Ensure expanded content fills remaining height */
 }
 
 /* Image without white border */
@@ -124,14 +119,10 @@ body {
     border: none; /* Remove any default border */
     display: block; /* Make sure the image takes full space */
     margin: 0; /* Remove any default margins */
+    max-height: 100%; /* Make the image fit the height of the dropdown */
 }
 
-/* Fixed tab height when collapsed */
-.dropdown {
-    height: 33.33vh; /* Tabs maintain a fixed height when collapsed */
+/* Ensure only one dropdown is open at a time */
+.dropdown.open ~ .dropdown .dropdown-content {
+    display: none;
 }
-
-.dropdown.open .dropdown-header {
-    height: 33.33vh; /* Keep the same header height when expanded */
-}
-
