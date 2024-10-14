@@ -71,7 +71,7 @@ body {
 /* Dropdown Styles */
 .dropdown {
     width: 100%; /* Full width of the screen */
-    border: 1px solid #1a1714;
+    border: 1px solid #010101;
     box-sizing: border-box;
 }
 
@@ -95,8 +95,8 @@ body {
 /* Content inside dropdown */
 .dropdown-content {
     display: none;
-    background-color: #f1efe5;
-    color: #1a1714;
+    background-color: #010101;
+    color: #010101;
     padding: 20px;
     box-sizing: border-box;
 }
