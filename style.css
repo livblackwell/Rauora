@@ -1,9 +1,18 @@
+/* Ensure the html and body take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* General Body Styles */
 body {
     margin: 0;
     font-family: 'Helvetica', sans-serif;
     background-color: #010101; /* Ensure the correct background color */
     color: #ea7234;
+    height: 100vh; /* Take up the full height of the viewport */
+    overflow: auto; /* Allow scrolling on the body */
 }
 
 /* Language Buttons Section (Landing Page Styles) */
@@ -41,22 +50,10 @@ body {
     color: #1a1714;
 }
 
-
 /* Landing Page Specific Styles */
 .landing-page {
     text-align: center;
     padding: 20px;
-}
-
-
-/* General Page Styles */
-body {
-    margin: 0;
-    font-family: 'Helvetica', sans-serif;
-    background-color: #010101;
-    color: #ea7234;
-    height: 100%;
-    overflow: auto; /* Allow scrolling on the body */
 }
 
 /* Container for all tabs */
@@ -65,6 +62,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100vh; /* Take up the full height of the viewport */
     overflow: auto; /* Allow the entire page to scroll */
 }
 
@@ -80,6 +78,7 @@ body {
     background-color: transparent;
     border: none;
     width: 100%;
+    height: 33.3vh; /* Take up 33.3% of the viewport height */
     padding: 20px;
     text-align: center;
     font-size: 24px;
