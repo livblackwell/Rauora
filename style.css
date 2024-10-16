@@ -82,6 +82,9 @@ body {
     padding: 20px;
     text-align: center;
     font-size: 24px;
+     color: antiquewhite;
+    font:helvetica;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
