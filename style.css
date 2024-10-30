@@ -88,6 +88,15 @@ body {
     outline: none;
 }
 
+/* Image styles for the header */
+.dropdown-header .tab-image {
+    height: 100%; /* Fit to the height of the header */
+    width: auto; /* Maintain original aspect ratio */
+    max-width: 100%; /* Prevent the image from exceeding the header's width */
+    object-fit: contain; /* Keep the image aspect ratio */
+}
+
+
 /* Individual tab header backgrounds */
 .dropdown1 .dropdown-header {
     background-image: url('images/logoc.png'); /* First tab background */
