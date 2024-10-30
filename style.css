@@ -105,6 +105,12 @@ body {
     background-image: url('images/logoa.png'); /* Third tab background */
 }
 
+/* Image styles for the header */
+.dropdown-header .tab-image {
+    width: auto; /* Maintain original width */
+    height: 100%; /* Fit to the height of the header */
+    object-fit: contain; /* Keep aspect ratio */
+}
 
 /* Content inside dropdown with custom backgrounds */
 .dropdown-content {
