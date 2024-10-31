@@ -66,23 +66,34 @@ body {
     overflow: auto; /* Allow the entire page to scroll */
 }
 
-/* Dropdown Styles */
+ /* Dropdown Styles */
 .dropdown {
     width: 100%; /* Full width of the screen */
     border: 1px solid #010101;
     box-sizing: border-box;
 }
 
-/* Dropdown header styles with individual backgrounds */
+/* Dropdown header styles */
 .dropdown-header {
-    background-size: cover; /* Ensures the image covers the header */
-    background-position: center; /* Centers the image */
+    background-color: transparent; /* Keep it transparent */
     border: none;
     width: 100%;
-    height: 33.3vh; /* Take up 33.3% of the viewport height */
+    height: 33.3vh; /* Adjust this height as needed */
+    padding: 0; /* Remove padding to let the image fit */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
+}
+
+/* Image styles for the header */
+.tab-image {
+    height: 100%; /* Fit to the height of the header */
+    width: auto; /* Maintain original aspect ratio */
+    max-width: none; /* Allow width to expand based on the image aspect ratio */
+    object-fit: contain; /* Keep the image aspect ratio */
 }
 
 /* Individual tab header backgrounds */
@@ -131,10 +142,9 @@ body {
 }
 
 /* Make the image scrollable vertically */
-.tab-image {
-    width: 100%;
+.dropdown-content .tab-image {
+    width: 100%; /* Fit to the width of the dropdown content */
     height: auto; /* Maintain the aspect ratio */
     display: block;
     object-fit: contain; /* Avoid cropping */
-    border: none;
 }
