@@ -83,7 +83,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Dropdown header styles with individual backgrounds */
+/* Dropdown header styles */
 .dropdown-header {
     background-size: cover; /* Ensures the image covers the header */
     background-position: center; /* Centers the image */
@@ -108,13 +108,14 @@ body {
     background-image: url('images/logoa.png'); /* Third tab background */
 }
 
-/* Content inside dropdown with custom backgrounds */
+/* Content inside dropdown */
 .dropdown-content {
     display: none;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto; /* Scroll content if it's too long */
-    width: 100%
+    width: 100%;
+    max-height: 60vh; /* Set a max height for the dropdown */
 }
 
 .dropdown1 .dropdown-content {
@@ -132,8 +133,6 @@ body {
 /* Open dropdown content */
 .dropdown.open .dropdown-content {
     display: block;
-    width: 100%;
-    max-height: 60vh; /* Limit the height of dropdown to allow scrolling */
 }
 
 /* Ensure only one tab is open at a time */
@@ -143,7 +142,8 @@ body {
 
 /* Make the image scrollable vertically */
 .tab-image {
-    width: 100%;
+    width: 100%; /* Make the image fit the dropdown width */
+    max-height: 100%; /* Limit the height to allow vertical scrolling */
     height: auto; /* Maintain the aspect ratio */
     display: block;
     object-fit: contain; /* Avoid cropping */
