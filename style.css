@@ -75,18 +75,11 @@ body {
 
 /* Dropdown header styles with individual backgrounds */
 .dropdown-header {
-    background-color: transparent;
     background-size: cover; /* Ensures the image covers the header */
     background-position: center; /* Centers the image */
     border: none;
     width: 100%;
     height: 33.3vh; /* Take up 33.3% of the viewport height */
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    color: transparent; /* Hide text, only display the image */
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
@@ -94,19 +87,15 @@ body {
 
 /* Individual tab header backgrounds */
 .dropdown1 .dropdown-header {
-    background-image: url('path/to/your/image1.jpg'); /* First tab background */
+    background-image: url('images/logoc.png'); /* First tab background */
 }
 
 .dropdown2 .dropdown-header {
-    background-image: url('path/to/your/image2.jpg'); /* Second tab background */
+    background-image: url('images/logob.png'); /* Second tab background */
 }
 
 .dropdown3 .dropdown-header {
-    background-image: url('path/to/your/image3.jpg'); /* Third tab background */
-}
-
-.dropdown-header:hover {
-    background-color: #ea7234; /* Optional: Add a color overlay on hover */
+    background-image: url('images/logoa.png'); /* Third tab background */
 }
 
 /* Content inside dropdown with custom backgrounds */
@@ -118,18 +107,15 @@ body {
 }
 
 .dropdown1 .dropdown-content {
-    background-color: #333333; /* Background for first dropdown */
-    color: #ffffff; /* Text color for contrast */
+    background-color: #ebead5; /* Background for first dropdown */
 }
 
 .dropdown2 .dropdown-content {
-    background-color: #444444; /* Background for second dropdown */
-    color: #ffffff;
+    background-color: #4d6c40; /* Background for second dropdown */
 }
 
 .dropdown3 .dropdown-content {
-    background-color: #555555; /* Background for third dropdown */
-    color: #ffffff;
+    background-color: #020202; /* Background for third dropdown */
 }
 
 /* Open dropdown content */
@@ -142,4 +128,13 @@ body {
 /* Ensure only one tab is open at a time */
 .dropdown.open ~ .dropdown .dropdown-content {
     display: none;
+}
+
+/* Make the image scrollable vertically */
+.tab-image {
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio */
+    display: block;
+    object-fit: contain; /* Avoid cropping */
+    border: none;
 }
