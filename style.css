@@ -79,8 +79,8 @@ body {
     border: none;
     width: 100%;
     height: 33.3vh; /* Adjust this height as needed */
-    padding: 0; /* Remove padding to let the image fit */
-    display: flex; /* Use flexbox to center the image */
+    padding: 10px; /* Add a small buffer around the image */
+    display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
     cursor: pointer;
@@ -90,9 +90,10 @@ body {
 
 /* Image styles for the header */
 .tab-image {
-    height: 100%; /* Fit to the height of the header */
+    max-height: 90%; /* Prevent the image from exceeding the header's height */
+    max-width: 90%; /* Prevent the image from exceeding the header's width */
+    height: auto; /* Maintain original aspect ratio */
     width: auto; /* Maintain original aspect ratio */
-    max-width: none; /* Allow width to expand based on the image aspect ratio */
     object-fit: contain; /* Keep the image aspect ratio */
 }
 
