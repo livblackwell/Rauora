@@ -114,6 +114,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto; /* Scroll content if it's too long */
+    width: 100%
 }
 
 .dropdown1 .dropdown-content {
