@@ -75,38 +75,24 @@ body {
 
 /* Dropdown header styles */
 .dropdown-header {
-    background-color: transparent; /* Keep it transparent */
+    background-color: transparent;
     border: none;
     width: 100%;
     height: 33.3vh; /* Adjust this height as needed */
-    padding: 0; /* Remove padding to let the image fit */
-    display: flex; /* Use flexbox to center the image */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
 }
 
-/* Image styles for the header */
-.tab-image {
-    height: 100%; /* Fit to the height of the header */
-    width: auto; /* Maintain original aspect ratio */
-    max-width: none; /* Allow width to expand based on the image aspect ratio */
-    object-fit: contain; /* Keep the image aspect ratio */
-}
-
-/* Individual tab header backgrounds */
-.dropdown1 .dropdown-header {
-    background-image: url('images/logoc.png'); /* First tab background */
-}
-
-.dropdown2 .dropdown-header {
-    background-image: url('images/logob.png'); /* Second tab background */
-}
-
-.dropdown3 .dropdown-header {
-    background-image: url('images/logoa.png'); /* Third tab background */
+/* Heading styles */
+.dropdown-header h2 {
+    font-size: 24px; /* Adjust font size as needed */
+    color: #000; /* Set text color */
+    margin: 0;
+    font: Helvetica
 }
 
 /* Content inside dropdown with custom backgrounds */
@@ -118,33 +104,25 @@ body {
 }
 
 .dropdown1 .dropdown-content {
-    background-color: #ebead5; /* Background for first dropdown */
+    background-color: #ebead5;
 }
 
 .dropdown2 .dropdown-content {
-    background-color: #4d6c40; /* Background for second dropdown */
+    background-color: #4d6c40;
 }
 
 .dropdown3 .dropdown-content {
-    background-color: #020202; /* Background for third dropdown */
+    background-color: #020202;
 }
 
 /* Open dropdown content */
 .dropdown.open .dropdown-content {
     display: block;
     width: 100%;
-    max-height: 60vh; /* Limit the height of dropdown to allow scrolling */
+    max-height: 60vh;
 }
 
 /* Ensure only one tab is open at a time */
 .dropdown.open ~ .dropdown .dropdown-content {
     display: none;
-}
-
-/* Make the image scrollable vertically */
-.dropdown-content .tab-image {
-    width: 100%; /* Fit to the width of the dropdown content */
-    height: auto; /* Maintain the aspect ratio */
-    display: block;
-    object-fit: contain; /* Avoid cropping */
 }
