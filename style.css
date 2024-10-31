@@ -66,16 +66,6 @@ body {
     overflow: auto; /* Allow the entire page to scroll */
 }
 
-/* Container for all tabs */
-.page-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh; /* Take up the full height of the viewport */
-    overflow: auto; /* Allow the entire page to scroll */
-}
-
 /* Dropdown Styles */
 .dropdown {
     width: 100%; /* Full width of the screen */
@@ -83,13 +73,20 @@ body {
     box-sizing: border-box;
 }
 
-/* Dropdown header styles */
+/* Dropdown header styles with individual backgrounds */
 .dropdown-header {
+    background-color: transparent;
     background-size: cover; /* Ensures the image covers the header */
     background-position: center; /* Centers the image */
     border: none;
     width: 100%;
     height: 33.3vh; /* Take up 33.3% of the viewport height */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: transparent; /* Hide text, only display the image */
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
@@ -97,55 +94,52 @@ body {
 
 /* Individual tab header backgrounds */
 .dropdown1 .dropdown-header {
-    background-image: url('images/logoc.png'); /* First tab background */
+    background-image: url('path/to/your/image1.jpg'); /* First tab background */
 }
 
 .dropdown2 .dropdown-header {
-    background-image: url('images/logob.png'); /* Second tab background */
+    background-image: url('path/to/your/image2.jpg'); /* Second tab background */
 }
 
 .dropdown3 .dropdown-header {
-    background-image: url('images/logoa.png'); /* Third tab background */
+    background-image: url('path/to/your/image3.jpg'); /* Third tab background */
 }
 
-/* Content inside dropdown */
+.dropdown-header:hover {
+    background-color: #ea7234; /* Optional: Add a color overlay on hover */
+}
+
+/* Content inside dropdown with custom backgrounds */
 .dropdown-content {
     display: none;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto; /* Scroll content if it's too long */
-    width: 100%;
-    max-height: 60vh; /* Set a max height for the dropdown */
 }
 
 .dropdown1 .dropdown-content {
-    background-color: #ebead5; /* Background for first dropdown */
+    background-color: #333333; /* Background for first dropdown */
+    color: #ffffff; /* Text color for contrast */
 }
 
 .dropdown2 .dropdown-content {
-    background-color: #4d6c40; /* Background for second dropdown */
+    background-color: #444444; /* Background for second dropdown */
+    color: #ffffff;
 }
 
 .dropdown3 .dropdown-content {
-    background-color: #020202; /* Background for third dropdown */
+    background-color: #555555; /* Background for third dropdown */
+    color: #ffffff;
 }
 
 /* Open dropdown content */
 .dropdown.open .dropdown-content {
     display: block;
+    width: 100%;
+    max-height: 60vh; /* Limit the height of dropdown to allow scrolling */
 }
 
 /* Ensure only one tab is open at a time */
 .dropdown.open ~ .dropdown .dropdown-content {
     display: none;
-}
-
-/* Make the image scrollable vertically */
-.tab-image {
-    width: 100%; /* Make the image fit the dropdown width */
-    max-height: 100%; /* Limit the height to allow vertical scrolling */
-    height: auto; /* Maintain the aspect ratio */
-    display: block;
-    object-fit: contain; /* Avoid cropping */
-    border: none;
 }
